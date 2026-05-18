@@ -25,8 +25,9 @@ fi
 model=$1
 input_speech=$2
 output_speech=$3
-features_in=/tmp/features_in.f32
-features_out=/tmp/features_out.f32
+features_in=features_in.f32
+features_out=features_out.f32
+rm -f ${features_in} ${features_out}
 
 # eat first 3 args before passing rest to inference.py in $@
 shift; shift; shift
